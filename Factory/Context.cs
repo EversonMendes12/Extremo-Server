@@ -1,6 +1,13 @@
-﻿namespace Server.Factory
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace Server.Factory
 {
-    public class Context 
+    public class Context : DbContext
     {
+        public Context(DbContextOptions<Context> options) : base(options) 
+        {
+
+        }
+        
     }
 }
